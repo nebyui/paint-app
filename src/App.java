@@ -47,7 +47,7 @@ public class App extends Application {
 
     public void BuildApp(Stage primaryStage) {
         primaryStage.setTitle("Painting App");
-        primaryStage.setFullScreen(true);
+        // primaryStage.setFullScreen(true);
 
         javafx.geometry.Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds(); // gets computer screen size
 
@@ -86,7 +86,7 @@ public class App extends Application {
         });
 
         ToggleButton eraserButton = new ToggleButton(); // creates eraser button
-        Image eraserIcon = new Image("icon/eraser_icon.png");
+        Image eraserIcon = new Image("icon/eraser_icon.png"); // loads icon for eraser button
         ImageView eraserImageView = new ImageView(eraserIcon);
         eraserImageView.setFitWidth(24);
         eraserImageView.setFitHeight(24);
@@ -153,7 +153,7 @@ public class App extends Application {
 
             if (event.isShiftDown()) {
                 double differenceX = event.getSceneX() - mousePressX; // Calculates change in x
-                double differenceY = event.getScreenY() - mousePressY; // Calculates change in y
+                double differenceY = event.getSceneY() - mousePressY; // Calculates change in y
 
                 translateX += differenceX;
                 translateY += differenceY;

@@ -1,32 +1,33 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This program is a simple painting application made in Java. I am an artist and a programmer, and something I would like to eventually make is a great free mobile art app that is not stuffed with adds or locks basic features behind a subscription. This project is a first step into learning how to make are-related software. 
 
-{Provide a description of the software that you wrote to demonstrate the Java language.}
-
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
+### Features
+- Scroll to zoom in and out
+- Hold Shift to drag canvas around
+- Brush size slider
+- Color picker
+- Eraser
+- Saving and importing PNGs
 
 [Software Demo Video](http://youtube.link.goes.here)
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+- Made in Visual Studio Code
 
-{Describe the programming language that you used and any libraries.}
+- Written in Java
+
+- Uses JavaFX package
 
 # Useful Websites
-
-{Make a list of websites that you found helpful in this project}
 
 - [Setting up JavaFX](https://www.youtube.com/watch?v=NYGHL8N6Kc8)
 - [ChatGPT](https://chatgpt.com)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- Add layer functionality
+- Fix a bug involving the 'save' button on color picker
+- Make the eraser an actual eraser instead of a white brush
+- Continue to add the basic features that any decent art app would have, like different shapes, selection tool, eyedrop tool, bucket tool, clipping masks, etc.
