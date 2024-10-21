@@ -42,7 +42,6 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         BuildApp(primaryStage); // Builds the app and GUI
-
     }
 
     public void BuildApp(Stage primaryStage) {

@@ -10,7 +10,7 @@ This program is a simple painting application made in Java. I am an artist and a
 - Eraser
 - Saving and importing PNGs
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/vDHuzt3ETCw)
 
 # Development Environment
 
