@@ -81,7 +81,7 @@ public class App extends Application {
         brushSizeSlider.setMajorTickUnit(10);
         brushSizeSlider.setMinorTickCount(10);
         brushSizeSlider.setPrefWidth(500);
-        brushSizeSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
+        brushSizeSlider.valueProperty().addListener((_, _, newValue) -> {
             brushSize = newValue.doubleValue();
         });
 
@@ -93,17 +93,17 @@ public class App extends Application {
         eraserButton.setGraphic(eraserImageView);
 
         ColorPicker colorPicker = new ColorPicker(currentColor); // creates color picker widget
-        colorPicker.setOnAction(event -> {
+        colorPicker.setOnAction(_ -> {
             if (!eraserButton.isSelected()) {
                 currentColor = colorPicker.getValue();
             }
         });
 
         Button saveButton = new Button("Save"); // creates save button
-        saveButton.setOnAction(event -> saveDrawing(canvas));
+        saveButton.setOnAction(_ -> saveDrawing(canvas));
 
         Button loadButton = new Button("Load"); // creates load button
-        loadButton.setOnAction(event -> loadDrawing(canvas));
+        loadButton.setOnAction(_ -> loadDrawing(canvas));
 
         // adds each button and widget to the toolbar
         toolbar.getChildren().add(0, brushSizeSlider);
@@ -112,7 +112,7 @@ public class App extends Application {
         toolbar.getChildren().add(3, saveButton);
         toolbar.getChildren().add(4, loadButton);
 
-        eraserButton.setOnAction(event -> { // handles actions for eraser button
+        eraserButton.setOnAction(_ -> { // handles actions for eraser button
             if (eraserButton.isSelected()) {
                 currentColor = Color.WHITE; // for now, the eraser simply sets the brush color to white
                 eraserButton.setStyle("-fx-background-color: rgb(120, 150, 200);"); // overlay for when eraser is on
@@ -122,6 +122,8 @@ public class App extends Application {
             }
 
         });
+
+        eraserButton.setOnAction(null);
 
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, event -> { // draws point when mouse button is pressed
             if (!event.isShiftDown()) { // the shift key is used for panning, so check if its pressed
