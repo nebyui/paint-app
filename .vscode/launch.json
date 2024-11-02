@@ -6,23 +6,6 @@
     "configurations": [
         {
             "type": "java",
-<<<<<<< HEAD
-            "name": "App",
-            "request": "launch",
-            "mainClass": "App",
-            "projectName": "paint-app_2cec6e6d"
-        },
-        {
-            "type": "java",
-            "name": "App",
-            "request": "launch",
-            "mainClass": "App",
-            "projectName": "paint-app - Copy_cffb36a3"
-        },
-        {
-            "type": "java",
-=======
->>>>>>> d26d73e2960020c358e17b254963961a3c35f1d2
             "name": "PaintApp",
             "request": "launch",
             "mainClass": "PaintApp",
